@@ -402,6 +402,92 @@
       line-height: 1.6;
     }
 
+    /* ===== MOAT SECTION ===== */
+    .moat {
+      background: var(--cream);
+    }
+
+    .moat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 3rem;
+    }
+
+    .moat-callouts {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .moat-callout {
+      padding: 2rem;
+      background: var(--white);
+      border: 1px solid rgba(26, 26, 24, 0.06);
+      position: relative;
+    }
+
+    .moat-callout::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--sage);
+    }
+
+    .moat-callout-number {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: var(--sage);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .moat-callout-text {
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+
+    .moat-flywheel {
+      margin-top: 3rem;
+      padding: 2.5rem;
+      background: var(--sage-pale);
+      text-align: center;
+    }
+
+    .moat-flywheel h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+    }
+
+    .moat-flywheel-steps {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--ink-light);
+      line-height: 1.8;
+    }
+
+    .moat-flywheel-steps .step {
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .moat-flywheel-steps .arrow {
+      color: var(--sage);
+      font-weight: 600;
+    }
+
     /* ===== SOLUTION SECTION ===== */
     .solution {
       background: var(--cream);
@@ -455,6 +541,123 @@
       font-size: 0.95rem;
       color: var(--ink-muted);
       line-height: 1.7;
+    }
+
+    /* ===== TECHNOLOGY SECTION ===== */
+    .technology {
+      background: var(--ink);
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .technology::before {
+      content: '';
+      position: absolute;
+      bottom: -40%;
+      left: -15%;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201, 168, 92, 0.12) 0%, transparent 70%);
+    }
+
+    .technology .section-label {
+      color: var(--gold);
+    }
+
+    .technology .section-title {
+      color: var(--cream);
+    }
+
+    .technology .section-subtitle {
+      color: rgba(245, 240, 234, 0.6);
+    }
+
+    .technology .prose {
+      color: rgba(245, 240, 234, 0.75);
+    }
+
+    .technology .prose strong {
+      color: var(--cream);
+    }
+
+    .technology .section-divider {
+      background: var(--gold);
+    }
+
+    .tech-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tech-pillar {
+      padding: 2.5rem;
+      border: 1px solid rgba(245, 240, 234, 0.1);
+      background: rgba(245, 240, 234, 0.03);
+      transition: all 0.3s ease;
+    }
+
+    .tech-pillar:hover {
+      border-color: rgba(201, 168, 92, 0.3);
+      background: rgba(245, 240, 234, 0.05);
+    }
+
+    .tech-pillar-icon {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+
+    .tech-pillar h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: var(--cream);
+    }
+
+    .tech-pillar p {
+      font-size: 0.95rem;
+      color: rgba(245, 240, 234, 0.6);
+      line-height: 1.7;
+    }
+
+    .tech-headline-stat {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      position: relative;
+      z-index: 1;
+      padding-top: 3rem;
+      border-top: 1px solid rgba(245, 240, 234, 0.08);
+    }
+
+    .tech-stat {
+      text-align: center;
+    }
+
+    .tech-stat-number {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 400;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .tech-stat-label {
+      font-size: 0.8rem;
+      color: rgba(245, 240, 234, 0.5);
+      letter-spacing: 0.05em;
     }
 
     /* ===== ECONOMICS SECTION ===== */
@@ -704,8 +907,8 @@
 
     .team-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
       margin-top: 3rem;
     }
 
@@ -1082,7 +1285,17 @@
       .opportunity-callouts,
       .why-now-grid,
       .economics-targets,
-      .roadmap-timeline {
+      .roadmap-timeline,
+      .tech-headline-stat {
+        grid-template-columns: 1fr;
+      }
+
+      .moat-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .tech-pillars {
         grid-template-columns: 1fr;
       }
 
@@ -1236,6 +1449,60 @@
     </div>
   </section>
 
+  <!-- OUR MOAT -->
+  <section class="moat">
+    <div class="container reveal">
+      <div class="section-label">Our Moat</div>
+      <div class="section-divider"></div>
+      <h2 class="section-title">The Farm <em>Network</em></h2>
+      <p class="section-subtitle">Relationships that take years to build and can't be replicated by a competitor with a chequebook.</p>
+
+      <div class="moat-grid">
+        <div class="prose">
+          <p>Our competitive advantage isn't a feature — it's the network of direct, trust-based partnerships we've built with local producers across NSW. These are farmers who were locked out of the major supermarket supply chains — not because their products weren't good enough, but because the system wasn't built for them.</p>
+          <p>Every farm relationship represents embedded knowledge: seasonal yield patterns, quality consistency, handling requirements, and logistics that compound over time. <strong>This isn't a commodity market where any supplier is interchangeable</strong> — every farm is unique in its soil, varieties, and practices. A competitor can't replicate these relationships by launching a platform.</p>
+          <p>In the traditional supply chain, farmers receive roughly <strong>27 cents of every consumer food dollar</strong>. We restructure that equation — giving producers a fairer share, which earns loyalty that locks in supply. When your farmers are earning more and selling consistently, they don't leave.</p>
+        </div>
+        <div class="moat-callouts">
+          <div class="moat-callout">
+            <div class="moat-callout-number">34.5%</div>
+            <div class="moat-callout-text">Average premium consumers willingly pay for products from short, transparent supply chains</div>
+          </div>
+          <div class="moat-callout">
+            <div class="moat-callout-number">87%</div>
+            <div class="moat-callout-text">Of Australians say supporting local farmers is their strongest reason for visiting farmers' markets</div>
+          </div>
+          <div class="moat-callout">
+            <div class="moat-callout-number">57.7%</div>
+            <div class="moat-callout-text">Of consumers willing to pay a premium for fully traceable meat products</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="moat-flywheel">
+        <h3>The Flywheel That Gets Harder to Compete With</h3>
+        <div class="moat-flywheel-steps">
+          <span class="step">Better farms</span>
+          <span class="arrow">→</span>
+          <span class="step">Better food</span>
+          <span class="arrow">→</span>
+          <span class="step">More customers</span>
+          <span class="arrow">→</span>
+          <span class="step">More volume for farmers</span>
+          <span class="arrow">→</span>
+          <span class="step">More farms want to join</span>
+          <span class="arrow">→</span>
+          <span class="step">Even better selection</span>
+          <span class="arrow">→</span>
+          <span class="step">Lower unit costs</span>
+          <span class="arrow">→</span>
+          <span class="step">Better prices for everyone</span>
+          <span class="arrow">↻</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- THE SOLUTION -->
   <section class="solution">
     <div class="container reveal">
@@ -1291,6 +1558,59 @@
           <p>Every product earns its place through a clear vetting process — "Why It Made the Cut." This isn't about
             being preachy; it's about giving customers the information the supermarkets don't. What's in it, where it's
             from, and why it's worth your money.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNOLOGY -->
+  <section class="technology">
+    <div class="container reveal">
+      <div class="section-label">Technology</div>
+      <div class="section-divider"></div>
+      <h2 class="section-title">Built for <em>Intelligence</em></h2>
+      <p class="section-subtitle">AI-native from day one — not bolted onto a legacy system built thirty years ago.</p>
+
+      <div class="prose" style="margin-bottom: 2rem;">
+        <p>Woolworths has spent <strong>over $2 billion</strong> retrofitting automated fulfilment into legacy operations. Coles reported $327 million in automation savings — from a system that still runs on decades-old infrastructure. For incumbents, the biggest barrier is cultural as much as technical: departmental silos and legacy systems slow every decision.</p>
+        <p>Farmthru has no legacy. Every layer of the platform — from order to fulfilment to delivery — is built on a unified data layer with AI at its core. That means we move faster, waste less, and get smarter with every order.</p>
+      </div>
+
+      <div class="tech-pillars">
+        <div class="tech-pillar">
+          <div class="tech-pillar-icon">01</div>
+          <h3>AI Demand Forecasting</h3>
+          <p>Perishable waste is the margin killer in grocery. AI-driven demand forecasting reduces fresh food waste by 20–49% industry-wide. Our system predicts demand at the SKU level — adjusting for seasonality, weather, local events, and buying patterns — so we order what sells and waste almost nothing.</p>
+        </div>
+        <div class="tech-pillar">
+          <div class="tech-pillar-icon">02</div>
+          <h3>Automated Fulfilment</h3>
+          <p>Our hub picking systems achieve 700–800 units per hour — a 10x throughput advantage over the industry average of 60–80 UPH for manual operations. Ocado achieves similar speeds but at billions in capital expenditure. We reach it at a fraction of the cost because the hub was designed for automation from the start.</p>
+        </div>
+        <div class="tech-pillar">
+          <div class="tech-pillar-icon">03</div>
+          <h3>Conversational Commerce</h3>
+          <p>Generative AI is transforming how people shop for groceries. Our platform integrates AI-powered shopping assistants that can plan meals, build carts from recipes, filter for dietary needs, and auto-reorder favourites. The same capability Woolworths and Albertsons are spending millions to bolt on, we integrate natively.</p>
+        </div>
+        <div class="tech-pillar">
+          <div class="tech-pillar-icon">04</div>
+          <h3>The Data Flywheel</h3>
+          <p>Every transaction generates data — consumer preferences, seasonal patterns, farm capacity, delivery logistics. This intelligence loop means better predictions, less waste, better margins, and better prices. A new entrant starting from zero can't replicate this compounding advantage.</p>
+        </div>
+      </div>
+
+      <div class="tech-headline-stat">
+        <div class="tech-stat">
+          <div class="tech-stat-number">10x</div>
+          <div class="tech-stat-label">Picking throughput vs. manual operations</div>
+        </div>
+        <div class="tech-stat">
+          <div class="tech-stat-number">20–49%</div>
+          <div class="tech-stat-label">Waste reduction from AI demand forecasting</div>
+        </div>
+        <div class="tech-stat">
+          <div class="tech-stat-number">$2B+</div>
+          <div class="tech-stat-label">What incumbents spent retrofitting — we built from scratch</div>
         </div>
       </div>
     </div>
@@ -1498,15 +1818,13 @@
             connecting local producers to customers. Focused on operational excellence — the purchasing, quality, and
             fulfilment that make or break a food business.</p>
         </div>
-      </div>
-
-      <div class="team-supporters">
-        <h3>Supported By</h3>
-        <p><strong>Rachel Ward & Bryan Brown</strong> — regenerative farmers on the NSW Mid-North Coast, brand
-          ambassadors, and among the first suppliers on the platform. Their public profile provides launch credibility
-          and opens doors to high-impact PR across national media.</p>
-        <p style="margin-top: 0.75rem;"><strong>Confirmed supplier partners:</strong> Rachel's Farm, Bellamy & Sons,
-          Gillinghall Farmer Brown's Pastured Eggs, Happy Hens Healthy Eggs, Block 11 Organics.</p>
+        <div class="team-member">
+          <div class="team-member-role">Co-founder</div>
+          <h3>Rachel Ward</h3>
+          <p>Regenerative farmer on the NSW Mid-North Coast and one of Australia's most recognised advocates for
+            sustainable agriculture. Brings immediate brand credibility, national media access, and deep producer
+            networks — connecting Farmthru to the farming community from the inside.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -1609,6 +1927,24 @@
         <p>6. UWA Research Repository — Food Provenance & Willingness to Pay. <a
             href="https://research-repository.uwa.edu.au/en/publications/food-provenance-assurance-and-willingness-to-pay-for-blockchain-d/"
             target="_blank">uwa.edu.au</a></p>
+        <p>7. Global Challenges (Wiley) — Meta-analysis of Consumer WTP for Short Food Supply Chain Products (2025). <a
+            href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11891576/"
+            target="_blank">pmc.ncbi.nlm.nih.gov</a></p>
+        <p>8. Inside FMCG — Farmers' Markets and the Future of Fresh Food Retail in Australia (2024). <a
+            href="https://insidefmcg.com.au/2024/05/23/farmers-markets-and-the-future-of-fresh-food-retail-in-australia/"
+            target="_blank">insidefmcg.com.au</a></p>
+        <p>9. Nature Food — Post-Farmgate Food Value Chains (2021). <a
+            href="https://www.nature.com/articles/s43016-021-00279-9"
+            target="_blank">nature.com</a></p>
+        <p>10. Afresh Technologies — Reducing Food Waste in Grocery. <a
+            href="https://www.afresh.com/resources/afreshs-work-to-eliminate-food-waste"
+            target="_blank">afresh.com</a></p>
+        <p>11. LEK Consulting — Micro-Fulfillment Centers in Grocery. <a
+            href="https://www.lek.com/sites/default/files/PDFs/LEK-Micro-Fulfillment-Centers-Grocery.pdf"
+            target="_blank">lek.com</a></p>
+        <p>12. McKinsey — LLM to ROI: How to Scale Gen AI in Retail. <a
+            href="https://www.mckinsey.com/industries/retail/our-insights/llm-to-roi-how-to-scale-gen-ai-in-retail"
+            target="_blank">mckinsey.com</a></p>
       </div>
     </div>
   </div>
