@@ -454,7 +454,7 @@
 
     .moat-flywheel {
       margin-top: 3rem;
-      padding: 2.5rem;
+      padding: 2.5rem 2.5rem 3rem;
       background: var(--sage-pale);
       text-align: center;
     }
@@ -464,28 +464,96 @@
       font-size: 1.2rem;
       font-weight: 500;
       color: var(--ink);
-      margin-bottom: 1.25rem;
+      margin-bottom: 2rem;
     }
 
-    .moat-flywheel-steps {
+    .flywheel-graphic {
+      position: relative;
+      width: 520px;
+      height: 520px;
+      margin: 0 auto;
+    }
+
+    .flywheel-graphic svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .flywheel-node {
+      position: absolute;
+      width: 110px;
+      text-align: center;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.35;
+      transform: translate(-50%, -50%);
+    }
+
+    .flywheel-node .node-icon {
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      font-size: 0.9rem;
-      color: var(--ink-light);
-      line-height: 1.8;
+      width: 44px;
+      height: 44px;
+      margin: 0 auto 0.4rem;
+      background: var(--sage);
+      color: var(--white);
+      border-radius: 50%;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
     }
 
-    .moat-flywheel-steps .step {
+    .flywheel-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: var(--font-display);
+      font-size: 0.85rem;
       font-weight: 500;
+      color: var(--sage);
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .flywheel-center span {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 600;
       color: var(--ink);
     }
 
-    .moat-flywheel-steps .arrow {
-      color: var(--sage);
-      font-weight: 600;
+    @media (max-width: 600px) {
+      .moat-flywheel {
+        padding: 2rem 0.5rem 2.5rem;
+      }
+      .flywheel-graphic {
+        width: 290px;
+        height: 290px;
+      }
+      .flywheel-node {
+        width: 72px;
+        font-size: 0.62rem;
+      }
+      .flywheel-node .node-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.6rem;
+        margin-bottom: 0.2rem;
+      }
+      .flywheel-center span {
+        font-size: 1rem;
+      }
+      .flywheel-center {
+        font-size: 0.65rem;
+      }
     }
 
     /* ===== SOLUTION SECTION ===== */
@@ -1481,23 +1549,35 @@
 
       <div class="moat-flywheel">
         <h3>The Flywheel That Gets Harder to Compete With</h3>
-        <div class="moat-flywheel-steps">
-          <span class="step">Better farms</span>
-          <span class="arrow">→</span>
-          <span class="step">Better food</span>
-          <span class="arrow">→</span>
-          <span class="step">More customers</span>
-          <span class="arrow">→</span>
-          <span class="step">More volume for farmers</span>
-          <span class="arrow">→</span>
-          <span class="step">More farms want to join</span>
-          <span class="arrow">→</span>
-          <span class="step">Even better selection</span>
-          <span class="arrow">→</span>
-          <span class="step">Lower unit costs</span>
-          <span class="arrow">→</span>
-          <span class="step">Better prices for everyone</span>
-          <span class="arrow">↻</span>
+        <div class="flywheel-graphic" id="flywheel">
+          <svg viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Circular arrow track -->
+            <defs>
+              <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                <polygon points="0 0, 8 3, 0 6" fill="#5C6B54" />
+              </marker>
+            </defs>
+            <!-- 8 arc segments with arrowheads, radius 155, center 260,260 -->
+            <path d="M 260 105 A 155 155 0 0 1 369.6 150.4" stroke="#5C6B54" stroke-width="2" stroke-opacity="0.4" fill="none" marker-end="url(#arrowhead)" />
+            <path d="M 369.6 150.4 A 155 155 0 0 1 415 260" stroke="#5C6B54" stroke-width="2" stroke-opacity="0.4" fill="none" marker-end="url(#arrowhead)" />
+            <path d="M 415 260 A 155 155 0 0 1 369.6 369.6" stroke="#5C6B54" stroke-width="2" stroke-opacity="0.4" fill="none" marker-end="url(#arrowhead)" />
+            <path d="M 369.6 369.6 A 155 155 0 0 1 260 415" stroke="#5C6B54" stroke-width="2" stroke-opacity="0.4" fill="none" marker-end="url(#arrowhead)" />
+            <path d="M 260 415 A 155 155 0 0 1 150.4 369.6" stroke="#5C6B54" stroke-width="2" stroke-opacity="0.4" fill="none" marker-end="url(#arrowhead)" />
+            <path d="M 150.4 369.6 A 155 155 0 0 1 105 260" stroke="#5C6B54" stroke-width="2" stroke-opacity="0.4" fill="none" marker-end="url(#arrowhead)" />
+            <path d="M 105 260 A 155 155 0 0 1 150.4 150.4" stroke="#5C6B54" stroke-width="2" stroke-opacity="0.4" fill="none" marker-end="url(#arrowhead)" />
+            <path d="M 150.4 150.4 A 155 155 0 0 1 260 105" stroke="#5C6B54" stroke-width="2" stroke-opacity="0.4" fill="none" marker-end="url(#arrowhead)" />
+          </svg>
+          <!-- 8 nodes positioned around the circle -->
+          <div class="flywheel-node" style="top: 7%; left: 50%;"><div class="node-icon">01</div>Better farms</div>
+          <div class="flywheel-node" style="top: 19.5%; left: 80.5%;"><div class="node-icon">02</div>Better food</div>
+          <div class="flywheel-node" style="top: 50%; left: 93%;"><div class="node-icon">03</div>More customers</div>
+          <div class="flywheel-node" style="top: 80.5%; left: 80.5%;"><div class="node-icon">04</div>More volume for farmers</div>
+          <div class="flywheel-node" style="top: 93%; left: 50%;"><div class="node-icon">05</div>More farms want to join</div>
+          <div class="flywheel-node" style="top: 80.5%; left: 19.5%;"><div class="node-icon">06</div>Even better selection</div>
+          <div class="flywheel-node" style="top: 50%; left: 7%;"><div class="node-icon">07</div>Lower unit costs</div>
+          <div class="flywheel-node" style="top: 19.5%; left: 19.5%;"><div class="node-icon">08</div>Better prices for everyone</div>
+          <!-- Center label -->
+          <div class="flywheel-center"><span>Flywheel</span>Each turn compounds</div>
         </div>
       </div>
     </div>
