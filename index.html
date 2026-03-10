@@ -807,6 +807,64 @@
       letter-spacing: 0.05em;
     }
 
+    /* ===== FINANCIAL CHARTS ===== */
+    .charts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .chart-card {
+      padding: 2rem;
+      background: var(--white);
+      border: 1px solid rgba(26, 26, 24, 0.06);
+    }
+
+    .chart-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.25rem;
+    }
+
+    .chart-subtitle {
+      font-size: 0.82rem;
+      color: var(--ink-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .chart-container svg {
+      width: 100%;
+      height: auto;
+    }
+
+    .chart-axis-label {
+      font-family: var(--font-body);
+      font-size: 10px;
+      fill: var(--ink-muted);
+    }
+
+    .chart-annotation {
+      font-family: var(--font-body);
+      font-size: 10px;
+      font-weight: 500;
+    }
+
+    .chart-value-label {
+      font-family: var(--font-body);
+      font-size: 9px;
+      fill: var(--ink-muted);
+      text-anchor: middle;
+    }
+
+    @media (max-width: 900px) {
+      .charts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* ===== WHY NOW ===== */
     .why-now {
       background: var(--sage-pale);
@@ -1530,6 +1588,7 @@
           <p>Our competitive advantage isn't a feature — it's the network of direct, trust-based partnerships we're building with local producers across NSW. These are farmers locked out of the major supermarket supply chains — not because their products aren't good enough, but because the system wasn't built for them.</p>
           <p>Every farm relationship we develop creates embedded knowledge: seasonal yield patterns, quality consistency, handling requirements, and logistics that compound over time. <strong>This isn't a commodity market where any supplier is interchangeable</strong> — every farm is unique in its soil, varieties, and practices. A competitor can't replicate these relationships by launching a platform.</p>
           <p>For comparable farm-direct products, supermarkets take 26–35% margin — leaving farmers with roughly <strong>65–74 cents per retail dollar</strong>. Our farm-direct suppliers retain <strong>75–82 cents of every retail dollar</strong> because we take a lower margin and cut the intermediaries. That earns loyalty that locks in supply. When your farmers are earning more and selling consistently, they don't leave.</p>
+          <p>But the moat isn't only structural — it's emotional. Supermarkets deliberately anonymised food: plastic-wrapped, fluorescent-lit, no story. We reverse that. Every order connects customers to the people behind their food — farm story cards, full traceability, the producer's own brand on the product. For proteins, eggs, and dairy, this matters more than any other category. <strong>Customers aren't just buying beef — they're buying trust in how it was raised.</strong> That emotional connection drives repeat rates, word-of-mouth, and a willingness to pay a premium that no discount retailer can compete with.</p>
         </div>
         <div class="moat-callouts">
           <div class="moat-callout">
@@ -1637,6 +1696,14 @@
           <p>Every product earns its place through a clear vetting process — "Why It Made the Cut." This isn't about
             being preachy; it's about giving customers the information the supermarkets don't. What's in it, where it's
             from, and why it's worth your money.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-letter">E.</div>
+          <h3>The Hub Experience</h3>
+          <p>Our hubs won't feel like warehouses — they'll feel like the point where the farm meets the city. Natural
+            materials, farm photography, and stories from the producers behind every product. Orders arrive with
+            farm story cards — who raised this beef, where the hens roam, what the cows are fed. Customers
+            don't just collect groceries; they collect food with a name, a face, and a story behind it.</p>
         </div>
       </div>
     </div>
@@ -1769,6 +1836,114 @@
 
       <div class="prose" style="margin-top: 2.5rem;">
         <p style="font-size: 0.95rem; color: var(--ink-muted);"><strong>Model insight:</strong> Our 24.9% product margin is intentionally below Coles/Woolworths (26–27%). The difference goes directly to producers — our farm-direct suppliers retain 75–82 cents per dollar compared to 65–74 cents through traditional supermarket supply chains for equivalent products. This lower margin is viable because our cost base is fundamentally different: light industrial rent, no retail fitout, no checkout staff, and semi-variable picking costs that scale with demand.</p>
+      </div>
+
+      <div class="charts-grid">
+        <!-- Chart 1: 24-Month Cash Runway -->
+        <div class="chart-card">
+          <h3>24-Month Cash Runway</h3>
+          <p class="chart-subtitle">Cash position from raise through to recovery — $688K remaining at month 24.</p>
+          <div class="chart-container">
+            <svg viewBox="0 0 760 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Grid lines -->
+              <line x1="60" y1="300" x2="740" y2="300" stroke="#E8E4DE" stroke-width="1"/>
+              <line x1="60" y1="232" x2="740" y2="232" stroke="#E8E4DE" stroke-width="0.5" stroke-dasharray="4"/>
+              <line x1="60" y1="165" x2="740" y2="165" stroke="#E8E4DE" stroke-width="0.5" stroke-dasharray="4"/>
+              <line x1="60" y1="97" x2="740" y2="97" stroke="#E8E4DE" stroke-width="0.5" stroke-dasharray="4"/>
+              <line x1="60" y1="30" x2="740" y2="30" stroke="#E8E4DE" stroke-width="0.5" stroke-dasharray="4"/>
+              <!-- Y axis labels -->
+              <text x="55" y="304" class="chart-axis-label" text-anchor="end">$500K</text>
+              <text x="55" y="236" class="chart-axis-label" text-anchor="end">$825K</text>
+              <text x="55" y="169" class="chart-axis-label" text-anchor="end">$1.15M</text>
+              <text x="55" y="101" class="chart-axis-label" text-anchor="end">$1.48M</text>
+              <text x="55" y="34" class="chart-axis-label" text-anchor="end">$1.8M</text>
+              <!-- X axis labels -->
+              <text x="60" y="318" class="chart-axis-label" text-anchor="middle">M1</text>
+              <text x="207.8" y="318" class="chart-axis-label" text-anchor="middle">M6</text>
+              <text x="355.7" y="318" class="chart-axis-label" text-anchor="middle">M12</text>
+              <text x="503.5" y="318" class="chart-axis-label" text-anchor="middle">M18</text>
+              <text x="740" y="318" class="chart-axis-label" text-anchor="middle">M24</text>
+              <!-- Filled area -->
+              <path d="M 60.0,47.6 L 60.0,47.6 L 89.6,64.5 L 119.1,81.2 L 148.7,97.7 L 178.3,113.8 L 207.8,129.5 L 237.4,144.7 L 267.0,159.1 L 296.5,172.6 L 326.1,185.0 L 355.7,196.0 L 385.2,239.3 L 414.8,252.1 L 444.3,262.5 L 473.9,269.8 L 503.5,273.4 L 533.0,274.2 L 562.6,274.5 L 592.2,274.2 L 621.7,273.2 L 651.3,271.6 L 680.9,269.2 L 710.4,265.7 L 740.0,261.0 L 740.0,300 L 60.0,300 Z" fill="#5C6B54" fill-opacity="0.1"/>
+              <!-- Cash line -->
+              <polyline points="60.0,47.6 89.6,64.5 119.1,81.2 148.7,97.7 178.3,113.8 207.8,129.5 237.4,144.7 267.0,159.1 296.5,172.6 326.1,185.0 355.7,196.0 385.2,239.3 414.8,252.1 444.3,262.5 473.9,269.8 503.5,273.4 533.0,274.2 562.6,274.5 592.2,274.2 621.7,273.2 651.3,271.6 680.9,269.2 710.4,265.7 740.0,261.0" stroke="#5C6B54" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+              <!-- Hub 2 capex drop annotation -->
+              <line x1="385.2" y1="196" x2="385.2" y2="239" stroke="#B8694A" stroke-width="1" stroke-dasharray="3"/>
+              <text x="385.2" y="192" class="chart-annotation" fill="#B8694A" text-anchor="middle" font-size="9">Hub 2 opens</text>
+              <!-- Trough annotation -->
+              <circle cx="562.6" cy="274.5" r="4" fill="#B8694A"/>
+              <text x="562.6" y="292" class="chart-annotation" fill="#B8694A" text-anchor="middle">Trough: $623K</text>
+              <!-- Break-even marker -->
+              <line x1="577.4" y1="30" x2="577.4" y2="300" stroke="#5C6B54" stroke-width="1" stroke-dasharray="4"/>
+              <text x="577.4" y="24" class="chart-annotation" fill="#5C6B54" text-anchor="middle" font-size="9">Break-even</text>
+              <!-- End annotation -->
+              <circle cx="740" cy="261" r="4" fill="#5C6B54"/>
+              <text x="720" y="254" class="chart-annotation" fill="#5C6B54" text-anchor="end" font-size="9">$688K</text>
+              <!-- Start annotation -->
+              <circle cx="60" cy="47.6" r="4" fill="#5C6B54"/>
+              <text x="80" y="44" class="chart-annotation" fill="#5C6B54" text-anchor="start" font-size="9">$1.72M</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Chart 2: 5-Year Revenue + EBITDA -->
+        <div class="chart-card">
+          <h3>5-Year Network Revenue</h3>
+          <p class="chart-subtitle">Revenue scaling to $31.7M with EBITDA positive from Year 4.</p>
+          <div class="chart-container">
+            <svg viewBox="0 0 520 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Grid lines -->
+              <line x1="70" y1="280" x2="470" y2="280" stroke="#E8E4DE" stroke-width="1"/>
+              <line x1="70" y1="209" x2="470" y2="209" stroke="#E8E4DE" stroke-width="0.5" stroke-dasharray="4"/>
+              <line x1="70" y1="138" x2="470" y2="138" stroke="#E8E4DE" stroke-width="0.5" stroke-dasharray="4"/>
+              <line x1="70" y1="66" x2="470" y2="66" stroke="#E8E4DE" stroke-width="0.5" stroke-dasharray="4"/>
+              <!-- Y axis labels (Revenue) -->
+              <text x="65" y="284" class="chart-axis-label" text-anchor="end">$0</text>
+              <text x="65" y="213" class="chart-axis-label" text-anchor="end">$10M</text>
+              <text x="65" y="142" class="chart-axis-label" text-anchor="end">$20M</text>
+              <text x="65" y="70" class="chart-axis-label" text-anchor="end">$30M</text>
+              <!-- X axis labels -->
+              <text x="110" y="298" class="chart-axis-label" text-anchor="middle">Year 1</text>
+              <text x="190" y="298" class="chart-axis-label" text-anchor="middle">Year 2</text>
+              <text x="270" y="298" class="chart-axis-label" text-anchor="middle">Year 3</text>
+              <text x="350" y="298" class="chart-axis-label" text-anchor="middle">Year 4</text>
+              <text x="430" y="298" class="chart-axis-label" text-anchor="middle">Year 5</text>
+              <!-- Revenue bars -->
+              <rect x="85" y="273.5" width="50" height="6.5" fill="#5C6B54" rx="2"/>
+              <rect x="165" y="242.2" width="50" height="37.8" fill="#5C6B54" rx="2"/>
+              <rect x="245" y="183.7" width="50" height="96.3" fill="#5C6B54" rx="2"/>
+              <rect x="325" y="114.7" width="50" height="165.3" fill="#5C6B54" rx="2"/>
+              <rect x="405" y="53.4" width="50" height="226.6" fill="#5C6B54" rx="2"/>
+              <!-- Revenue value labels -->
+              <text x="110" y="269" class="chart-value-label">$0.9M</text>
+              <text x="190" y="237" class="chart-value-label">$5.3M</text>
+              <text x="270" y="178" class="chart-value-label">$13.5M</text>
+              <text x="350" y="109" class="chart-value-label">$23.1M</text>
+              <text x="430" y="48" class="chart-value-label">$31.7M</text>
+              <!-- EBITDA line -->
+              <polyline points="110,261.7 190,267.4 270,242.0 350,137.3 430,55.0" stroke="#B8694A" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+              <!-- EBITDA dots -->
+              <circle cx="110" cy="261.7" r="4" fill="#B8694A"/>
+              <circle cx="190" cy="267.4" r="4" fill="#B8694A"/>
+              <circle cx="270" cy="242.0" r="4" fill="#B8694A"/>
+              <circle cx="350" cy="137.3" r="4" fill="#B8694A"/>
+              <circle cx="430" cy="55.0" r="4" fill="#B8694A"/>
+              <!-- EBITDA zero line -->
+              <line x1="70" y1="155" x2="470" y2="155" stroke="#B8694A" stroke-width="0.5" stroke-dasharray="3" opacity="0.5"/>
+              <text x="472" y="159" class="chart-axis-label" fill="#B8694A" text-anchor="start" font-size="7">EBITDA = 0</text>
+              <!-- EBITDA labels for key points -->
+              <text x="130" y="258" class="chart-annotation" fill="#B8694A" text-anchor="start" font-size="8">-$1.0M</text>
+              <text x="370" y="140" class="chart-annotation" fill="#B8694A" text-anchor="start" font-size="8">+$170K</text>
+              <text x="450" y="58" class="chart-annotation" fill="#B8694A" text-anchor="start" font-size="8">+$960K</text>
+              <!-- Legend -->
+              <rect x="70" y="316" width="12" height="8" fill="#5C6B54" rx="1"/>
+              <text x="86" y="324" class="chart-axis-label">Revenue</text>
+              <line x1="130" y1="320" x2="145" y2="320" stroke="#B8694A" stroke-width="2"/>
+              <circle cx="137.5" cy="320" r="3" fill="#B8694A"/>
+              <text x="150" y="324" class="chart-axis-label">EBITDA</text>
+            </svg>
+          </div>
+        </div>
       </div>
     </div>
   </section>
