@@ -819,6 +819,8 @@
       padding: 2rem;
       background: var(--white);
       border: 1px solid rgba(26, 26, 24, 0.06);
+      display: flex;
+      flex-direction: column;
     }
 
     .chart-card h3 {
@@ -837,6 +839,9 @@
 
     .chart-container {
       overflow: visible;
+      flex: 1;
+      display: flex;
+      align-items: center;
     }
 
     .chart-container svg {
@@ -1847,7 +1852,7 @@
         <!-- Chart 1: 24-Month Cash Runway -->
         <div class="chart-card">
           <h3>24-Month Cash Runway</h3>
-          <p class="chart-subtitle">Cash position from raise through to recovery — $688K remaining at month 24.</p>
+          <p class="chart-subtitle">Cash position from raise through to recovery — $688K remaining at M24.</p>
           <div class="chart-container">
             <svg viewBox="0 0 540 380" fill="none" xmlns="http://www.w3.org/2000/svg">
               <!-- Grid lines -->
